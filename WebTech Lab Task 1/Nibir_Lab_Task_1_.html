@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 1</title>
+	<link rel="stylesheet" type="text/css" href="task1_style.css">
+	<!-- <style type="text/css">
+		//Using Class name
+		.bodyStyle{
+			background-color: #CFCFDC;
+		}
+		//Using Id name
+		#bodyStyle{
+			background-color: #CFCFDC;
+		}
+		//Using Html Tag
+		body{
+			background-color: #CFCFDC;
+		}
+	</style> -->
+</head>
+<body style="font-size: 120%;">
+	<p><font style="color: red;">*</font> - Denotes Required Information</p>
+	<p><b>> 1 Donation</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> 2 Confirmation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> 3 Thank you!</p>
+	
+	<form method="POST">
+		<h2 style="color: red;">Donor Information</h2>
+		<table border="0" align="center" width="60%">
+			<tr>
+				<td align="right" width="40%"><b>First Name</b><font style="color: red;">*</font></td>
+				<td><input type="text" name="firstName" style="width: 300px;" required></td>
+			</tr>
+
+			<tr>
+				<td align="right" width="40%"><b>Last Name</b><font style="color: red;">*</font></td>
+				<td><input type="text" name="lastName" style="width: 300px;" required></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Company</td>
+				<td><input type="text" name="company" style="width: 300px;"></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Address 1<font style="color: red;">*</font></td>
+				<td><input type="text" name="address01" style="width: 300px;" required></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Address 2</td>
+				<td><input type="text" name="address02" style="width: 300px;"></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">City<font style="color: red;">*</font></td>
+				<td><input type="text" name="city" style="width: 300px;" required></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">State<font style="color: red;">*</font></td>
+				<td>
+					<select id="state" style="width: 200px; height:30px;" required>
+					  <option value="" selected="">Select state</option>
+					  <option value="chittagong">Chittagong</option>
+					  <option value="dhaka">Dhaka</option>
+					  <option value="khulna">Khulna</option>
+					  <option value="sylhet">Sylhet</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Zip Code<font style="color: red;">*</font></td>
+				<td><input type="number" name="zipCode" style="width: 300px;" required></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Country<font style="color: red;">*</font></td>
+				<td>
+					<select id="country" style="width: 200px; height:30px;" required>
+					  <option value="" selected="">Select country</option>
+					  <option value="bangladesh">Bangladesh</option>
+					  <option value="canada">Canada</option>
+					  <option value="india">India</option>
+					  <option value="norway">Norway</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Phone<font style="color: red;">*</font></td>
+				<td><input type="number" name="phone" style="width: 300px;" required></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Fax<font style="color: red;">*</font></td>
+				<td><input type="text" name="fax" style="width: 300px;" required></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Email<font style="color: red;">*</font></td>
+				<td><input type="text" name="email" style="width: 300px;" required></td>
+			</tr>
+
+
+
+			<tr>
+				<td align="right" width="40%">Donation Amount<font style="color: red;">*</font><br><font style="font-size: 70%;">(check a button or type in your amount)</font></td>
+				<td>
+					  <input type="radio" id="donationAmount01" name="donationAmount" value="" required>
+					  <label for="donationAmount01">None</label>
+					  <input type="radio" id="donationAmount02" name="donationAmount" value="50">
+					  <label for="donationAmount02">$50</label> 
+					  <input type="radio" id="donationAmount03" name="donationAmount" value="75">
+					  <label for="donationAmount03">$75</label>
+					  <input type="radio" id="donationAmount04" name="donationAmount" value="100">
+					  <label for="donationAmount04">$100</label>
+					  <input type="radio" id="donationAmount05" name="donationAmount" value="250">
+					  <label for="donationAmount05">$250</label>
+					  <input type="radio" id="donationAmount06" name="donationAmount" value="other">
+					  <label for="donationAmount06">Other</label><br>
+					  <b><font style="font-size: 80%;">Other Amount</font></b>&nbsp;&nbsp;&nbsp;$<input type="number" name="otherDonAmount" style="width: 180px;">
+				</td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Recurring Donation</td>
+				<td>
+					  <input type="checkbox" id="yes" name="recDonation" value="" >
+					  <label for="yes">I am intersted in giving on a regular basis</label>
+					  
+				</td>
+			</tr>
+			
+		</table>
+
+		<h2 style="color: red;">Honorarium and Memorial Donation Information</h2>
+		<table border="0" align="center" width="60%">
+			<tr>
+				<td align="right" width="40%"><b>I would like to make this<br>donation</b></td>
+				<td>
+					<input type="radio" id="donationReciever01" name="donationReciever" value="honor" >
+					<label for="donationReciever01">To Honor</label><br>
+					<input type="radio" id="donationReciever02" name="donationReciever" value="memory">
+					<label for="donationReciever">In memory of</label> 
+				</td>
+			</tr>
+
+			<tr>
+				<td align="right" width="40%"><b>Name</b></td>
+				<td><input type="text" name="name" style="width: 300px;"></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Acknowledge Donation To</td>
+				<td><input type="text" name="AcknowledgeDonationTo" style="width: 300px;"></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">Adress</td>
+				<td><input type="text" name="adress" style="width: 300px;" ></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%">City</td>
+				<td><input type="text" name="city" style="width: 300px;"></td>
+			</tr>
+     		<tr>
+				<td align="right" width="40%">State</td>
+				<td>
+					<select id="state" style="width: 200px; height:30px;" >
+					  <option value="" selected="">Select state</option>
+					  <option value="chittagong">Chittagong</option>
+					  <option value="dhaka">Dhaka</option>
+					  <option value="khulna">Khulna</option>
+					  <option value="sylhet">Sylhet</option>
+					</select>
+				</td>
+				<tr>
+				<td align="right" width="40%">Zip Code</td>
+				<td><input type="number" name="zipCode" style="width: 300px;" ></td>
+			</tr>
+		</table>
+
+		<h2 style="color: red;">Addition Information</h2>
+		<small>Please enter your name,company or organization as you would like it to appear in our publications:</small>
+		<table border="0" align="center" width="60%">
+			<tr>
+				<td align="right" width="40%">Name</td>
+				<td><input type="text" name="additionalName" style="width: 300px;"></td>
+			</tr>
+		</table>
+		<input type="checkbox" id="anonymousDonation" name="anonymousDonation" value="" ><label for="anonymousDonation"> I would like my gift to remain anonymous.</label><br>
+		<input type="checkbox" id="matchDonation" name="matchDonation" value="" ><label for="matchDonation"> My employer offers a matching gift program.I will mail the matching gift form.</label><br>
+		<input type="checkbox" id="saveDonation" name="saveDonation" value="" ><label for="saveDonation"> Please save the cost of acknowledging this gift by not mailling a thank you letter.</label><br>
+
+		<table border="0" align="center" width="60%" >
+			<tr>
+				<td align="right" width="40%" style="vertical-align: top;">Comments<br><small>(Please Type any questions or feedback here)</small></td>
+				<td><textarea name="comments" rows="7" style="width: 300px;"></textarea></td>
+			</tr>
+			<tr>
+				<td align="right" width="40%" style="vertical-align: top;"><b>How May we contact you?</b></td>
+				<td>
+					<input type="checkbox" id="email" name="contactWay" value="email" ><label for="email">Email</label><br>
+					<input type="checkbox" id="pmail" name="contactWay" value="postalmail" ><label for="pmail">Postal Mail</label><br>
+					<input type="checkbox" id="tel" name="contactWay" value="telephone" ><label for="tel">Telephone</label><br>
+					<input type="checkbox" id="fax" name="contactWay" value="fax" ><label for="fax">Fax</label><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="left">I would like to recieve newsletters & information about special events by</td>
+			</tr>
+			<tr>
+				<td align="right" width="40%" style="vertical-align: top;"></td>
+				<td>
+					<input type="checkbox" id="Semail" name="notificationWay" value="email" ><label for="Semail">Email</label><br>
+					<input type="checkbox" id="Spmail" name="notificationWay" value="postalmail" ><label for="Spmail">Postal Mail</label><br>
+					
+				</td>
+			</tr>
+		</table>
+		<input type="checkbox" id="volunteering" name="volunteering" value="volunteering" ><label for="volunteering"> I would like information about Volunteering with this Org.</label><br>
+		<table border="0" align="center" width="60%">
+			<tr>
+				<td align="center" style="font-size: 160%;">
+					<button name="resetBtn">Reset</button>&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="submitBtn" value="Continue">
+				</td>
+			</tr>
+		</table>
+
+	</form>
+<br><br><br><br>
+</body>
+</html>
+
+    	
+
+
+
+
+
+
