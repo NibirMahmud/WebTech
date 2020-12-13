@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<center>
+		<br><br><h1>Calculator</h1><br><br>
+		<h3 id="result">Result will be shown as alert</h3>
+		<input type="number" name="firstNum" id="firstNum" placeholder="Enter 1st Number"><br><br>
+		<input type="number" name="secNum" id="secNum" placeholder="Enter 2nd Number"><br><br>
+		Select Operator
+		<input type="radio" id="plus" name="Operator" value="1">
+		<label for="plus">+</label>
+	    <input type="radio" id="minus" name="Operator" value="2">
+    	<label for="minus">-</label>
+		<input type="radio" id="mul" name="Operator" value="3">
+		<label for="mul">*</label>
+		<input type="radio" id="div" name="Operator" value="4">
+		<label for="div">/</label><br><br>
+
+		<button onclick="getResult()"> Get Result</button>
+	</center>
+<script type="text/javascript">
+	function getResult(){
+		var firstNum= parseInt(document.getElementById("firstNum").value) ;
+		var secNum= parseInt(document.getElementById("secNum").value) ;
+		if (document.getElementById("plus").checked) {
+			var result = firstNum + secNum;
+			alert(result);
+		}
+		else if (document.getElementById("minus").checked) {
+			var result = firstNum - secNum;
+			alert(result);
+		}
+		else if (document.getElementById("mul").checked) {
+			var result = firstNum * secNum;
+			alert(result);
+		}
+		else if (document.getElementById("div").checked) {
+			var result = firstNum / secNum;
+			alert(result);
+		}
+		else
+		{
+			alert("PLease Select an Operator");
+		}
+		
+	}
+</script>
+</body>
+
+</html>
