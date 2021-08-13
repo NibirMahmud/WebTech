@@ -1,0 +1,18 @@
+#headerContainer{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#brandName{
+	color: #2A706E;
+}
+#myNav{
+	background-color: #2A706E;
+}
+.page-footer{
+	background-color: #2A706E;
+	color: white;
+}
+.page-footer a{
+	text-decoration: none;
+	color: white;
+}
